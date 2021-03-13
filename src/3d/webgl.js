@@ -4,11 +4,12 @@ require('three/examples/js/controls/OrbitControls')
 const canvasSketch = require('canvas-sketch')
 const random = require('canvas-sketch-util/random')
 const palettes = require('nice-color-palettes')
+const eases = require('eases')
 
 const settings = {
   dimensions: [1024, 1024],
   fps: 24,
-  duration: 20,
+  duration: 4,
   // Make the loop animated
   animate: true,
   // Get a WebGL canvas rather than 2D
@@ -88,7 +89,8 @@ const sketch = ({ context }) => {
     },
     // Update & render your scene here
     render({ playhead }) {
-      scene.rotation.y = playhead * Math.PI * 2
+      const rotation = Math.sin(playhead * Math.PI * 2)
+      scene.rotation.z = eases.expoInOut(rotation)
       renderer.render(scene, camera)
     },
     // Dispose of events & renderer for cleaner hot-reloading

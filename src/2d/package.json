@@ -1,0 +1,16 @@
+{
+  "name": "2d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "dependencies": {
+    "canvas-sketch": "^0.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
