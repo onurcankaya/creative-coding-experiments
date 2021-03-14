@@ -2,9 +2,10 @@
   "name": "2d",
   "version": "1.0.0",
   "description": "",
-  "main": "sketch.js",
+  "main": "dots-monochrome.js",
   "dependencies": {
-    "canvas-sketch": "^0.7.4"
+    "canvas-sketch": "^0.7.4",
+    "canvas-sketch-util": "^1.10.0"
   },
   "devDependencies": {},
   "scripts": {

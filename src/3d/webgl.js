@@ -9,7 +9,7 @@ const eases = require('eases')
 const settings = {
   dimensions: [1024, 1024],
   fps: 24,
-  duration: 4,
+  duration: 20,
   // Make the loop animated
   animate: true,
   // Get a WebGL canvas rather than 2D
@@ -89,8 +89,8 @@ const sketch = ({ context }) => {
     },
     // Update & render your scene here
     render({ playhead }) {
-      const rotation = Math.sin(playhead * Math.PI * 2)
-      scene.rotation.z = eases.expoInOut(rotation)
+      const rotation = playhead * Math.PI * 2
+      scene.rotation.y = rotation
       renderer.render(scene, camera)
     },
     // Dispose of events & renderer for cleaner hot-reloading
